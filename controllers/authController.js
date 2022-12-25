@@ -3,7 +3,6 @@ import bcrypt from 'bcrypt';
 import { createToken } from '../utils/token.js';
 
 export const register = async (req, res) => {
-  console.log(req);
   try {
     const { username, email, password, confirmPassword } = req.body;
     const existUser = await Users.findOne({ email });
